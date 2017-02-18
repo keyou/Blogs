@@ -51,10 +51,10 @@ Part 可以简单理解为 zip 中的文件，每一个文件都是一个 `Part`
 
 | 属性名 | 是否必须 | 说明 |
 | ------| ------ | ------ |
-| `Id` | 是 | 唯一标识符，在当前文件中是唯一的，不同文件中可以重复 |
-| `Type` | 是 | `Target` 的文件类型 |
-| `Target` | 是 | 目标 `Part` 的路径，可以用相对路径也可以用绝对路径 | 
-| `TargetMode` | 否 | 目标的类型，值可以是 `Internal` 或者 `External` （默认是`Internal`）,表示 `Target` 是OPC文件内部的还是外部的 |
+| Id | 是 | 唯一标识符，在当前文件中是唯一的，不同文件中可以重复 |
+| Type | 是 | `Target` 的文件类型 |
+| Target | 是 | 目标 `Part` 的路径，可以用相对路径也可以用绝对路径 | 
+| TargetMode | 否 | 目标的类型，值可以是 `Internal` 或者 `External` （默认是`Internal`）,表示 `Target` 是OPC文件内部的还是外部的 |
 
 ### `ContentTypes`
 
@@ -94,11 +94,11 @@ Part 可以简单理解为 zip 中的文件，每一个文件都是一个 `Part`
 
 | *ML | 全名 | 说明 | 
 | ----- | ------ | ------ |
-| `PML` | `Presentation Markup Language` | PPT 中各种数据的描述 | 
-| `WML` | `Wordprocessing Markup Language` | Word 中数据的描述 |
-| `SML` | `Spreadsheet Markup Language` | Excel 中数据的描述 |
-| `DML` | `Drawing Markup Language` |  Office 所有格式中都可以使用，用来描述矢量图形，图表等 |
-| `SharedML` | `Shared Markup Language` | 描述了文档属性，音视频，图片，文档主题等内容，它被所有Office文件使用 |
+| PML | Presentation Markup Language | PPT 中各种数据的描述 | 
+| WML | Wordprocessing Markup Language | Word 中数据的描述 |
+| SML | Spreadsheet Markup Language | Excel 中数据的描述 |
+| DML | Drawing Markup Language |  Office 所有格式中都可以使用，用来描述矢量图形，图表等 |
+| SharedML | Shared Markup Language | 描述了文档属性，音视频，图片，文档主题等内容，它被所有Office文件使用 |
 
 比如之前提到的 `presentation.xml` 文件，它的文件内容就是在 `PML` 中定义的。具体信息可以查看 `ECMA-376,Fifth Edition,Part 1`。但是，ECMA-376 太长了，还没看就头疼，怎么办。
 
