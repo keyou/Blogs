@@ -6,11 +6,11 @@
 
 Office2007 以后的文件格式属于 OOXML 文件格式，OOXML 是基于 zip+xml 定义的。
 
-OOXML 全称 `Office Open XML File Formats`，最初是由 [`ECMA-376`](ecma-376) 定义的，它目前已经到第六版。后来 [`ISO/IEC 29500`](iso/iec-29500) 也开始掺和OOXML格式的定义，不过可以认为从 [`ECMA-376`](ecma-376) 的第2版开始，这两个标准是一样的。目前最新的 OOXML 标准是在 2016 年发布的 [`ECMA-376 5th edition`](ecma-376) 或者 [`ISO/IEC 29500:2016`](iso/iec-29500)。
+OOXML 全称 `Office Open XML File Formats`，最初是由 [`ECMA-376`][ecma-376] 定义的，它目前已经到第六版。后来 [`ISO/IEC 29500`][iso/iec-29500] 也开始掺和OOXML格式的定义，不过可以认为从 [`ECMA-376`][ecma-376] 的第2版开始，这两个标准是一样的。目前最新的 OOXML 标准是在 2016 年发布的 [`ECMA-376 5th edition`][ecma-376] 或者 [`ISO/IEC 29500:2016`][iso/iec-29500]。
 
-微软的 Office 实现了OOXML格式，但不是全部，微软在 [这篇文章](OfficeStandardSupport) 中描述了其对标准的支持情况。
+微软的 Office 实现了OOXML格式，但不是全部，微软在 [这篇文章][OfficeStandardSupport] 中描述了其对标准的支持情况。
 
-OOXML = OPC + *ML ，下面会分别介绍 `OPC` 和 `*ML`。
+`OOXML = OPC + *ML` ，下面会分别介绍 `OPC` 和 `*ML`。
 
 > 由于 EMCA 文档可以免费在网上下载的，而 ISO 文档需要付费才能获取，因此下文的内容都是基于 ECMA-376 文档。
 
@@ -88,7 +88,7 @@ Part 可以简单理解为 zip 中的文件，每一个文件都是一个 `Part`
 
 ## `*ML (* Markup Language)`
 
-> 关于各种 `ML` 语言的详细信息请参考[ `ECMA-376,Fifth Edition,Part 1`](ecma-376) 。
+> 关于各种 `ML` 语言的详细信息请参考[ `ECMA-376,Fifth Edition,Part 1`][ecma-376] 。
 
 `Markup Language (ML)` 译为 `标记语言`，是一种用 XML 来描述数据的"语言"，比如：
 
@@ -102,11 +102,11 @@ Part 可以简单理解为 zip 中的文件，每一个文件都是一个 `Part`
 
 比如之前提到的 `presentation.xml` 文件，它的文件内容就是在 `PML` 中定义的。具体信息可以查看 `ECMA-376,Fifth Edition,Part 1`。但是，ECMA-376 太长了，还没看就头疼，怎么办。
 
-首先了解一下在 EMCA-376 中用来定义各种 ML 语言的 [XSD](xsd)：
+首先了解一下在 EMCA-376 中用来定义各种 ML 语言的 [XSD][xsd]：
 
-### [`XSD - XML Schema Definition`](xsd) 或者 [`XML Schema`](xsd)
+### [`XSD - XML Schema Definition`][xsd] 或者 [`XML Schema`][xsd]
 
-[`XSD`](xsd) 类似 [`DTD`](dtd)，它们有相似的作用。在 `ECMA-376` 中，所有的 `Markup Language` 都是 XML 格式的，而这些 XML 的具体节点内容，都是用 `XSD` 来定义的，所以我们要对它有一定的了解：
+[`XSD`][xsd] 类似 [`DTD`][dtd]，它们有相似的作用。在 `ECMA-376` 中，所有的 `Markup Language` 都是 XML 格式的，而这些 XML 的具体节点内容，都是用 `XSD` 来定义的，所以我们要对它有一定的了解：
 
 > XML Schema(XSD) 的作用：
 > * 定义可出现在文档中的元素
@@ -117,7 +117,7 @@ Part 可以简单理解为 zip 中的文件，每一个文件都是一个 `Part`
 > * 定义元素是否为空，或者是否可包含文本
 > * 定义元素和属性的数据类型
 > * 定义元素和属性的默认值以及固定值  
-> （可以在 [这里](xsd) 找到 `XSD` 的详细内容。）
+> （可以在 [这里][xsd] 找到 `XSD` 的详细内容。）
 
 在 `XSD` 中，有两个比较重要的概念：`Simple Type（简单类型）` 和 `Complex Type（复杂类型）`：
 
@@ -159,7 +159,7 @@ Part 可以简单理解为 zip 中的文件，每一个文件都是一个 `Part`
 
 ## POI/NPOI
 
-POI 是 Apache 的项目，[这里](poi) 是它的官网（NPOI 是 POI 的 .NET 版本）。背景知识我就不介绍了，这里摘自维基百科对它模块划分的介绍，可以在自己解析的时候参考：
+POI 是 Apache 的项目，[这里][poi] 是它的官网（NPOI 是 POI 的 .NET 版本）。背景知识我就不介绍了，这里摘自维基百科对它模块划分的介绍，可以在自己解析的时候参考：
 
 ```
 POIFS (Poor Obfuscation Implementation File System) – This component reads and writes Microsoft's OLE 2 Compound document format. Since all Microsoft Office files are OLE 2 files, this component is the basic building block of all the other POI elements. POIFS can therefore be used to read a wider variety of files, beyond those whose explicit decoders are already written in POI.（也就是OPC模块）
